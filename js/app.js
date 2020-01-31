@@ -21,7 +21,7 @@ function init() {
   win = null;
 
   render();
-}
+} 
 
 function render() {
   board.forEach(function(mark, index) {
