@@ -20,6 +20,7 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
+let table = document.getElementById("tableGyan")
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
   board = [
@@ -72,4 +73,8 @@ function getWinner() {
   });
 
   return winner ? winner : board.includes("") ? null : "T";
+}
+
+function gyan() {
+  
 }
