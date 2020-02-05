@@ -13,7 +13,9 @@ const winningConditions = [
 let board;
 let turn;
 let win;
-let newTable = 
+let table = document.getElementById("tableGyan")
+let x_winner = document.getElementById("x_wins")
+let o_winner = document.getElementById("o_wins")
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
@@ -21,7 +23,6 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-let table = document.getElementById("tableGyan")
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
   board = [
