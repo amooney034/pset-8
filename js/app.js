@@ -14,8 +14,10 @@ let board;
 let turn;
 let win;
 let table = document.getElementById("tableGyan")
-let x_winner = document.getElementById("x_wins")
-let o_winner = document.getElementById("o_wins")
+var x_winner = document.getElementById("x_wins")
+var o_winner = document.getElementById("o_wins")
+var x_counter = 0;
+var o_counter = 0;
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
@@ -40,7 +42,14 @@ function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
-
+   if (win === "X") {
+    x_counter++
+  }
+  else if (win === "O") {
+    o_counter++
+  }
+  x_winner.innerHTML = x_counter
+  o_winner.innerHTML = o_counter
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
