@@ -42,10 +42,12 @@ function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
-   if (win === "X") {
+   if (win == "X") {
+     console.log("x")
     x_counter++
   }
-  else if (win === "O") {
+  else if (win == "O") {
+    console.log("o")
     o_counter++
   }
   x_winner.innerHTML = x_counter
