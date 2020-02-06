@@ -25,6 +25,8 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
+document.getElementById("x_turn").onclick = chooseTurnX
+document.getElementById("o_turn").onclick = chooseTurnO
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
   board = [
@@ -86,4 +88,12 @@ function getWinner() {
   });
 
   return winner ? winner : board.includes("") ? null : "T";
+}
+
+function chooseTurnX() {
+  turn = "X"
+}
+
+function chooseTurnO() {
+  turn = "O"
 }
