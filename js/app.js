@@ -105,3 +105,4 @@ function chooseTurnO() {
   turn = "O"
   turn = 0
 }
+
