@@ -18,7 +18,7 @@ var x_winner = document.getElementById("x_wins")
 var o_winner = document.getElementById("o_wins")
 var x_counter = 0;
 var o_counter = 0;
-var turn_count;
+var turn_counter;
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
@@ -38,10 +38,10 @@ function init() {
   turn = "X";
   win = null;
   render();
-  if (turn_counter = 1) {
+  if (turn_counter == 1) {
     turn === "X" 
   }
-  else if (turn_counter = 0) {
+  else if (turn_counter == 0) {
     turn === "O"
   }
 }
@@ -98,11 +98,11 @@ function getWinner() {
 
 function chooseTurnX() {
   turn = "X"
-  turn = 1
+  turn_counter = 1
 }
 
 function chooseTurnO() {
   turn = "O"
-  turn = 0
+  turn_counter = 0
 }
 
