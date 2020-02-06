@@ -37,13 +37,13 @@ function init() {
   ];
   turn = "X";
   win = null;
-  render();
   if (turn_counter == 1) {
-    turn === "X" 
+    turn = "X" 
   }
   else if (turn_counter == 0) {
-    turn === "O"
+    turn = "O"
   }
+  render();
 }
 
 function render() {
@@ -97,12 +97,10 @@ function getWinner() {
 }
 
 function chooseTurnX() {
-  turn = "X"
   turn_counter = 1
 }
 
 function chooseTurnO() {
-  turn = "O"
   turn_counter = 0
 }
 
