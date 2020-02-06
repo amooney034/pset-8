@@ -38,9 +38,11 @@ function init() {
   turn = "X";
   win = null;
   if (turn_counter == 1) {
+    console.log("X")
     turn = "X" 
   }
   else if (turn_counter == 0) {
+    console.log("O")
     turn = "O"
   }
   render();
@@ -98,9 +100,11 @@ function getWinner() {
 
 function chooseTurnX() {
   turn_counter = 1
+  console.log("1")
 }
 
 function chooseTurnO() {
   turn_counter = 0
+  console.log("0")
 }
 
