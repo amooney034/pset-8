@@ -107,4 +107,3 @@ function chooseTurnO() {
   turn_counter = 0
   console.log("0")
 }
-
